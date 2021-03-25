@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="boost">
-          <h3 className="underline-title">Spadavault Access</h3>
+          <h3 className="underline-title">WBTC Vault Access</h3>
           <h5 className="underline-title">Conditions</h5>
 
           <ul className="conditions">
@@ -43,7 +43,10 @@ function App() {
           ></input>
           <div className="whitelist">
             {whitelist.includes(address.toLowerCase()) ? (
+              <div>
               <div className="whitelist-emoji">🔓</div>
+                <div>Vault Accessible at <a href="https://ape.tax">https://ape.tax</a></div>
+              </div>
             ) : (
               <div className="whitelist-emoji">🔒</div>
             )}
