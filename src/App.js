@@ -29,7 +29,7 @@ function App() {
             <li>Badger staking and LP before Badger launch</li>
             <li>Digg staker and LP after Digg Launch</li>
             <li>Digg supporter below peg</li>
-            <li>Governance participant</li>
+            <li>Badger governance participant</li>
             <li>Owns a Badger NFT</li>
           </ul>
           
