@@ -14,6 +14,7 @@ function App() {
     };
     fetchData();
   }, []);
+  console.log(whitelist)
 
   return (
     <div className="App">
