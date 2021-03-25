@@ -56,9 +56,11 @@
 }
 .whitelist-emoji {
   font-size: 30px;
+  height: 30px;
 }
 .whitelist {
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .underline-title {
@@ -69,4 +71,8 @@
 .conditions {
   font-size: 14px;
   text-align: left;
+}
+.vault-link {
+  height: 30px;
+  padding-top: 20px;
 }
