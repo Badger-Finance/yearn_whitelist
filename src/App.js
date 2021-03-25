@@ -10,7 +10,7 @@ function App() {
         "https://badgerdao.tk/rewards/yearn_whitelist.json"
       );
       const response = await result.json();
-      setWhitelist(response);
+      setWhitelist(response.map(addr => addr.toLowerCase()));
     };
     fetchData();
   }, []);
@@ -42,7 +42,7 @@ function App() {
             placeholder="Enter ethereum address"
           ></input>
           <div className="whitelist">
-            {whitelist.includes(address) ? (
+            {whitelist.includes(address.toLowerCase()) ? (
               <div className="whitelist-emoji">🔓</div>
             ) : (
               <div className="whitelist-emoji">🔒</div>
