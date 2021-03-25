@@ -23,11 +23,11 @@ function App() {
           <h5 className="underline-title">Conditions</h5>
 
           <ul className="conditions">
-            <li>Badger Staking and LP before Digg launch</li>
-            <li>Badger Staking and LP after Digg launch</li>
-            <li>Badger Staking and LP before Badger Launch</li>
-            <li>Digg Staker and LP after Digg Launch</li>
-            <li>Digg Supporter Below Peg</li>
+            <li>Badger staking and LP before Digg launch</li>
+            <li>Badger staking and LP after Digg launch</li>
+            <li>Badger staking and LP before Badger launch</li>
+            <li>Digg staker and LP after Digg Launch</li>
+            <li>Digg supporter below peg</li>
             <li>Governance participant</li>
             <li>Owns a Badger NFT</li>
           </ul>
