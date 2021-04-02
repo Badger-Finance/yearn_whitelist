@@ -1,5 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
+import web3 from "web3"
 
 function App() {
   const [address, setAddress] = useState("");
@@ -26,13 +27,12 @@ function App() {
         if (sum >=4) {
           data.allowed = true
         }
-        scores[addr.toLowerCase()] = response[addr]
+        scores[addr] = response[addr]
       }) 
       setWhitelist(scores);
     };
     fetchData();
   }, []);
-  console.log(Object.keys(conditions))
   return (
     <div className="App">
       <header className="App-header">
@@ -46,19 +46,26 @@ function App() {
                if (address in whitelist) {
                  if (cond in whitelist[address])
                    emoji = "✅"
-               } 
+               } else {
+               }
                 return (<li key={cond}>
                   {conditions[cond]} {emoji}
                 </li>)
             } )}
           </ul>
           
-       
-         
           <span className="badger-emoji">🦡🏦</span>
           <input
             value={address}
-            onChange={(e) => setAddress(e.target.value)}
+            onChange={(e) => {
+              let addr = ""
+              try {
+                addr = web3.utils.toChecksumAddress(e.target.value)
+              } catch {
+                addr = e.target.value 
+              }
+              setAddress(addr)
+            }}
             className="address"
             placeholder="Enter ethereum address"
           ></input>
