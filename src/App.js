@@ -58,7 +58,7 @@ function App() {
             })}
           </ul>
 
-          <span className="badger-emoji">🦡🏦</span>
+          <span className="badger-emoji">🦡🎯</span>
           <input
             value={address}
             onChange={(e) => {
