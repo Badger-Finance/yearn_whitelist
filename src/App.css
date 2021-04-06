@@ -21,8 +21,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-bottom: 100px;
 }
+.unlockable {
+  min-height: 75px;
 
+}
 .App-header {
   background-color: #ffc107;
   min-height: 100vh;
@@ -54,19 +58,21 @@
     width: 100%;
   }
 }
-.whitelist-emoji {
-  font-size: 30px;
+.whitelist-text {
+  font-size: 20px;
   height: 30px;
 }
 .whitelist {
   padding-top: 30px;
   padding-bottom: 30px;
   height: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .underline-title {
   text-decoration: underline;
-  margin: 20px;
+  margin: 15px;
 }
 
 .conditions {
@@ -76,4 +82,6 @@
 .vault-link {
   height: 30px;
   padding-top: 20px;
+  padding-bottom: 20px;
+  font-size:20px;
 }

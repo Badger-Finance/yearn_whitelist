@@ -74,32 +74,36 @@ function App() {
             placeholder="Enter ethereum address"
           ></input>
           <div className="whitelist">
+            <div className="unlockable">
             {address in whitelist && whitelist[address].vaultAllowed ? (
-              <div>
-                <div className="whitelist-emoji">Vault 🔓</div>
-                <div className="vault-link">
-                  Vault Accessible at
+              <div className="unlockable" >
+                <div className="whitelist-text">Vault 🔓</div>
+                <div className="whitelist-text">
+                  Vault Accessible at {}
                   <a href="https://badger.cetedel.rocks">
                     https://badger.cetedel.rocks
                   </a>
                 </div>
               </div>
             ) : (
-              <div className="whitelist-emoji vault-link">Vault 🔒</div>
+              <div className="whitelist-text">Vault 🔒</div>
             )}
-            {address in whitelist && whitelist[address].merchAllowed ? (
-              <div>
-                <div className="whitelist-emoji">Merch 🔓</div>
-                <div className="vault-link">
-                  Merch Accessible at
-                  <a href="https://shop.badger.finance<">
-                    https://shop.badger.finance
-                  </a>
+            </div>
+            <div className="unlockable">
+              {address in whitelist && whitelist[address].merchAllowed ? (
+                <div>
+                  <div className="whitelist-text">Merch 🔓</div>
+                  <div className="whitelist-text">
+                    Merch Accessible at{" "}
+                    <a href="https://shop.badger.finance<">
+                      https://shop.badger.finance
+                    </a>
+                  </div>
                 </div>
-              </div>
-            ) : (
-              <div className="whitelist-emoji vault-link">Merch 🔒</div>
-            )}
+              ) : (
+                <div className="whitelist-text">Merch 🔒</div>
+              )}
+            </div>
           </div>
         </div>
       </header>
