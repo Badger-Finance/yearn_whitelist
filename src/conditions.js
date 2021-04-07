@@ -1,11 +1,11 @@
 const conditions = {
   cond1: {
     condition: "Badger staking and LP before Digg launch",
-    tooltip: "Badger staked on 12/01, 12/29, 1/8, 1/18",
+    tooltip: "Badger staked/LP on 12/10, 12/29, 1/8, 1/18",
   },
   cond2: {
     condition: "Badger staking and LP after Digg launch",
-    tooltip: "Badger staked on 1/26, 2/11, 2/28, 3/17",
+    tooltip: "Badger staked/LP on 1/26, 2/11, 2/28, 3/17",
   },
   cond3: {
     condition: "In a non-native Sett since Badger Launch",
