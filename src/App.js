@@ -1,19 +1,12 @@
 import "./App.css";
+import "./tooltip.css";
 import { useEffect, useState } from "react";
 import web3 from "web3";
+import conditions from "./conditions";
 
 function App() {
   const [address, setAddress] = useState("");
   const [whitelist, setWhitelist] = useState([]);
-  const conditions = {
-    cond1: "Badger staking and LP before Digg launch",
-    cond2: "Badger staking and LP after Digg launch",
-    cond3: "In a non-native Sett since Badger Launch",
-    cond4: "Digg staker and LP after Digg Launch",
-    cond5: "Digg supporter below peg",
-    cond6: "Badger governance participant",
-    cond7: "Owns a Badger NFT",
-  };
   useEffect(() => {
     const fetchData = async () => {
       const result = await fetch(
@@ -50,9 +43,15 @@ function App() {
                 if (cond in whitelist[address]) emoji = "✅";
               } else {
               }
+              console.log(conditions[cond]);
               return (
                 <li key={cond}>
-                  {conditions[cond]} {emoji}
+                  <div className="tooltip">
+                    {conditions[cond].condition} {emoji}
+                    <span className="tooltiptext">
+                      {conditions[cond].tooltip}
+                    </span>
+                  </div>
                 </li>
               );
             })}
@@ -75,19 +74,19 @@ function App() {
           ></input>
           <div className="whitelist">
             <div className="unlockable">
-            {address in whitelist && whitelist[address].vaultAllowed ? (
-              <div className="unlockable" >
-                <div className="whitelist-text">Vault 🔓</div>
-                <div className="whitelist-text">
-                  Vault Accessible at {}
-                  <a href="https://badger.cetedel.rocks">
-                    https://badger.cetedel.rocks
-                  </a>
+              {address in whitelist && whitelist[address].vaultAllowed ? (
+                <div className="unlockable">
+                  <div className="whitelist-text">Vault 🔓</div>
+                  <div className="whitelist-text">
+                    Vault Accessible at {}
+                    <a href="https://badger.cetedel.rocks">
+                      https://badger.cetedel.rocks
+                    </a>
+                  </div>
                 </div>
-              </div>
-            ) : (
-              <div className="whitelist-text">Vault 🔒</div>
-            )}
+              ) : (
+                <div className="whitelist-text">Vault 🔒</div>
+              )}
             </div>
             <div className="unlockable">
               {address in whitelist && whitelist[address].merchAllowed ? (
