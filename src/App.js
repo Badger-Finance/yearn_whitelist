@@ -2,11 +2,16 @@ import "./App.css";
 import "./tooltip.css";
 import { useEffect, useState } from "react";
 import web3 from "web3";
+import loadWeb3 from "./loadWeb3";
 import conditions from "./conditions";
 
 function App() {
   const [address, setAddress] = useState("");
   const [whitelist, setWhitelist] = useState([]);
+
+  window.ethereum.on("accountsChanged", function (accounts) {
+    setAddress(accounts[0]);
+  });
   useEffect(() => {
     const fetchData = async () => {
       const result = await fetch(
@@ -25,12 +30,17 @@ function App() {
         }
         scores[addr] = response[addr];
       });
+
+    await loadWeb3();
       setWhitelist(scores);
     };
     fetchData();
   }, []);
   return (
     <div className="App">
+      <div>
+        
+      </div>
       <header className="App-header">
         <div className="boost">
           <h3 className="underline-title">Badger Score</h3>
@@ -43,7 +53,6 @@ function App() {
                 if (cond in whitelist[address]) emoji = "✅";
               } else {
               }
-              console.log(conditions[cond]);
               return (
                 <li key={cond}>
                   <div className="tooltip">

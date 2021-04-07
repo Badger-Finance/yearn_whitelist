@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display:flex;
+  flex-direction: column;
+  height:100vh;
 }
 #root {
   height: 100%;
@@ -28,14 +31,13 @@
 
 }
 .App-header {
-  background-color: #ffc107;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
+  margin-top: 100px;
 }
 
 .App-link {
@@ -84,4 +86,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
   font-size:20px;
+}
+.connect-wallet {
+  width: 100px;
 }
