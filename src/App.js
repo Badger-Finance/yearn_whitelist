@@ -89,8 +89,8 @@ function App() {
                   <div className="whitelist-text">Vault 🔓</div>
                   <div className="whitelist-text">
                    Accessible at {}
-                    <a href="https://badger.cetedel.rocks">
-                      https://badger.cetedel.rocks
+                    <a href="https://app.badger.finance">
+                      https://app.badger.finance
                     </a>
                   </div>
                 </div>
