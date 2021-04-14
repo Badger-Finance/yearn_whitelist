@@ -8,10 +8,11 @@ import conditions from "./conditions";
 function App() {
   const [address, setAddress] = useState("");
   const [whitelist, setWhitelist] = useState([]);
-
-  window.ethereum.on("accountsChanged", function (accounts) {
-    setAddress(accounts[0]);
-  });
+  if (window.ethereum) {
+    window.ethereum.on("accountsChanged", function (accounts) {
+      setAddress(accounts[0]);
+    });
+  }
   useEffect(() => {
     const fetchData = async () => {
       const result = await fetch(
@@ -31,16 +32,14 @@ function App() {
         scores[addr] = response[addr];
       });
 
-    // await loadWeb3();
+      // await loadWeb3();
       setWhitelist(scores);
     };
     fetchData();
   }, []);
   return (
     <div className="App">
-      <div>
-        
-      </div>
+      <div></div>
       <header className="App-header">
         <div className="boost">
           <h3 className="underline-title">Badger Score</h3>
@@ -76,7 +75,7 @@ function App() {
               } catch {
                 addr = e.target.value;
               }
-              addr = addr.replace(/ /g, '');
+              addr = addr.replace(/ /g, "");
               setAddress(addr);
             }}
             className="address"
@@ -88,7 +87,7 @@ function App() {
                 <div className="unlockable">
                   <div className="whitelist-text">Vault 🔓</div>
                   <div className="whitelist-text">
-                   Accessible at {}
+                    Accessible at {}
                     <a href="https://app.badger.finance">
                       https://app.badger.finance
                     </a>
