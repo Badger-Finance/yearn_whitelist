@@ -31,7 +31,7 @@ function App() {
         scores[addr] = response[addr];
       });
 
-    await loadWeb3();
+    // await loadWeb3();
       setWhitelist(scores);
     };
     fetchData();
