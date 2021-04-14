@@ -57,9 +57,9 @@ function App() {
                 <li key={cond}>
                   <div className="tooltip">
                     {conditions[cond].condition} {emoji}
-                    <span className="tooltiptext">
+                    <div className="tooltiptext">
                       {conditions[cond].tooltip}
-                    </span>
+                    </div>
                   </div>
                 </li>
               );
@@ -76,6 +76,7 @@ function App() {
               } catch {
                 addr = e.target.value;
               }
+              addr = addr.replace(/ /g, '');
               setAddress(addr);
             }}
             className="address"
@@ -104,7 +105,7 @@ function App() {
                   <div className="whitelist-text">
                     Merch Accessible at{" "}
                     <a href="https://shop.badger.finance<">
-                      https://shop.badger.finance
+                      https://verification.badger.finance
                     </a>
                   </div>
                 </div>

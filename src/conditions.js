@@ -17,7 +17,7 @@ const conditions = {
   },
   cond5: {
     condition: "Digg supporter below peg",
-    tooltip: "Digg balance higher on  3/17 than 2/18",
+    tooltip: "Digg balance higher on 3/17 than 2/18",
   },
   cond6: {
     condition: "Badger governance participant",

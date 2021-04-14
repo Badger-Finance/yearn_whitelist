@@ -4,20 +4,12 @@
   flex-direction: column;
   height:100vh;
 }
-#root {
-  height: 100%;
-}
 .App-logo {
-  height: 40vmin;
   pointer-events: none;
   padding-bottom: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+
 .boost {
   min-height: 40vh;
   display: flex;
@@ -57,6 +49,9 @@
 }
 @media only screen and (max-width: 600px) {
   .address {
+    width: 80%;
+  }
+  .App {
     width: 100%;
   }
 }
