@@ -88,7 +88,7 @@ function App() {
                 <div className="unlockable">
                   <div className="whitelist-text">Vault 🔓</div>
                   <div className="whitelist-text">
-                    Vault Accessible at {}
+                   Accessible at {}
                     <a href="https://badger.cetedel.rocks">
                       https://badger.cetedel.rocks
                     </a>
@@ -103,7 +103,7 @@ function App() {
                 <div>
                   <div className="whitelist-text">Merch 🔓</div>
                   <div className="whitelist-text">
-                    Merch Accessible at{" "}
+                    Accessible at{" "}
                     <a href="https://shop.badger.finance<">
                       https://verification.badger.finance
                     </a>
