@@ -104,7 +104,7 @@ function App() {
                   <div className="whitelist-text">Merch 🔓</div>
                   <div className="whitelist-text">
                     Accessible at{" "}
-                    <a href="https://shop.badger.finance<">
+                    <a href="https://verification.badger.finance">
                       https://verification.badger.finance
                     </a>
                   </div>
