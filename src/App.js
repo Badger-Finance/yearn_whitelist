@@ -85,7 +85,7 @@ function App() {
           <div className="whitelist">
            <Whitelist
             allowed={address in whitelist && whitelist[address].diggAirdrop}
-            name={"Digg Airdrop"}
+            name={"ibBTC Access"}
             link={"https://app.badger.finance"}
             />
             {/*<Whitelist
