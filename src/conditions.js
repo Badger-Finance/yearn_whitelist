@@ -29,7 +29,7 @@ const conditions = {
   },
   cond8:{
     condition:"Vault Depositor",
-    tooltip:"Balance is > 0 for either of: crvRenWBTC, crvRenWSBTC,tbtc/sbtcCRV, crvRenWBTC harvest, wbtcWethSLP,wBTC yearn Vault at 5/6/2021"
+    tooltip:"Balance is > 0 for either of: crvRenWBTC, crvRenWSBTC,                tbtc/sbtcCRV, harvest crvRenWBTC , wbtcWethSLP,wBTC yearn Vault at 5/6/2021"
   }
 };
 
