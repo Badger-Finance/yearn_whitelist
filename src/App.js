@@ -25,6 +25,7 @@ function App() {
         let sum = Object.values(data).reduce((a, b) => a + b, 0);
         if (sum >= 4) {
           data.vaultAllowed = true;
+          data.diggAirdrop = true
         }
         if (sum >= 2) {
           data.merchAllowed = true;
@@ -91,6 +92,11 @@ function App() {
             allowed={address in whitelist && whitelist[address].merchAllowed}
             name={"Merch"}
             link={"https://shop.badger.finance"}
+            />
+           <Whitelist
+            allowed={address in whitelist && whitelist[address].diggAirdrop}
+            name={"Digg Airdrop"}
+            link={"https://app.badger.finance"}
             />
             {/*<Whitelist
             allowed={address in whitelist}
