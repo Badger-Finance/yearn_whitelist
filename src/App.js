@@ -83,16 +83,6 @@ function App() {
             placeholder="Enter ethereum address"
           ></input>
           <div className="whitelist">
-            <Whitelist
-            allowed={address in whitelist && whitelist[address].vaultAllowed}
-            name={"WBTC Vault"}
-            link={"https://app.badger.finance"}
-            />
-            <Whitelist
-            allowed={address in whitelist && whitelist[address].merchAllowed}
-            name={"Merch"}
-            link={"https://shop.badger.finance"}
-            />
            <Whitelist
             allowed={address in whitelist && whitelist[address].diggAirdrop}
             name={"Digg Airdrop"}
