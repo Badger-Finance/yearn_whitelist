@@ -28,8 +28,8 @@ const conditions = {
     tooltip: "Owns any of the BadgerDAO NFTS",
   },
   cond8:{
-    condition:"Stakedays Ratio",
-    tooltip:"Stakedays ratio above X from DIGG launch to up to BSC launch"
+    condition:"Early Depositer",
+    tooltip:"Balance is > 0 for either of: crvRenWBTC, crvRenWSBTC,tbtc/sbtcCRV, crvRenWBTC harvest, wbtcWethSLP,wBTC yearn Vault at 5/6/2021"
   }
 };
 
