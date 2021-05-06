@@ -27,6 +27,10 @@ const conditions = {
     condition: "Owns a Badger NFT",
     tooltip: "Owns any of the BadgerDAO NFTS",
   },
+  cond8:{
+    condition:"Stakedays Ratio",
+    tooltip:"Stakedays ratio above X from DIGG launch to up to BSC launch"
+  }
 };
 
 export default conditions

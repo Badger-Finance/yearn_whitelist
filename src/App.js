@@ -2,7 +2,7 @@ import "./App.css";
 import "./tooltip.css";
 import { useEffect, useState } from "react";
 import web3 from "web3";
-import loadWeb3 from "./loadWeb3";
+import Whitelist from './components/Whitelist'
 import conditions from "./conditions";
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       const result = await fetch(
-        "https://badgerdao.tk/rewards/yearn_whitelist_scores.json"
+        "https://badgerdao.tk/rewards/scores.json"
       );
       const response = await result.json();
       let scores = {};
@@ -82,36 +82,23 @@ function App() {
             placeholder="Enter ethereum address"
           ></input>
           <div className="whitelist">
-            <div className="unlockable">
-              {address in whitelist && whitelist[address].vaultAllowed ? (
-                <div className="unlockable">
-                  <div className="whitelist-text">Vault 🔓</div>
-                  <div className="whitelist-text">
-                    Accessible at {}
-                    <a href="https://app.badger.finance">
-                      https://app.badger.finance
-                    </a>
-                  </div>
-                </div>
-              ) : (
-                <div className="whitelist-text">Vault 🔒</div>
-              )}
-            </div>
-            <div className="unlockable">
-              {address in whitelist && whitelist[address].merchAllowed ? (
-                <div>
-                  <div className="whitelist-text">Merch 🔓</div>
-                  <div className="whitelist-text">
-                    Accessible at{" "}
-                    <a href="https://verification.badger.finance">
-                      https://verification.badger.finance
-                    </a>
-                  </div>
-                </div>
-              ) : (
-                <div className="whitelist-text">Merch 🔒</div>
-              )}
-            </div>
+            <Whitelist
+            allowed={address in whitelist && whitelist[address].vaultAllowed}
+            name={"WBTC Vault"}
+            link={"https://app.badger.finance"}
+            />
+            <Whitelist
+            allowed={address in whitelist && whitelist[address].merchAllowed}
+            name={"Merch"}
+            link={"https://shop.badger.finance"}
+            />
+            {/*<Whitelist
+            allowed={address in whitelist}
+            name={"Digg Airdrop"}
+            link={"https://app.badger.finance"}
+            />*/}
+           
+           
           </div>
         </div>
       </header>
