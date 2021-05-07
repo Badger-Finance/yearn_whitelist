@@ -21,7 +21,7 @@ const conditions = {
   },
   cond6: {
     condition: "Badger governance participant",
-    tooltip: "Voted on badger snapshot.page",
+    tooltip: "Voted on badger snapshot.page before 7/04" ,
   },
   cond7: {
     condition: "Owns a Badger NFT",
