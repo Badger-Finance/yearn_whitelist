@@ -99,7 +99,7 @@ function App() {
            <Whitelist
             allowed={(address in whitelist && whitelist[address].diggAirdrop) || dfd_addrs.includes(address)}
             name={"ibBTC Access"}
-            link={"https://app.badger.finance"}
+            link={"https://app.badger.finance/ibBTC"}
             />
             {/*<Whitelist
             allowed={address in whitelist}
