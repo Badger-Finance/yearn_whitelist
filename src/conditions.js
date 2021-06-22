@@ -17,13 +17,13 @@ const conditions = {
   },
   cond5: {
     condition: "Non-native Sett user",
-    tooltip: `Balance is >0 for either of:
-1) crvRenWBTC
-2) crvRenWSBTC 
-3) tbtc/sbtcCRV
-4) crvRenWBTC harvest
-5) wbtc/eth SLP
-6) wBTC yearn Vault`,
+    tooltip: `Balance is >0 for either of: 
+ crvRenWBTC,
+ crvRenWSBTC, 
+ tbtc/sbtcCRV,
+ crvRenWBTC harvest,
+ wbtc/eth SLP,
+ wBTC yearn Vault`,
   },
   cond6: {
     condition: "ibBTC Sett user",
